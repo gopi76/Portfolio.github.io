@@ -1,3 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 30%;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="button button5">Up</button>
+
+
+<div style="background-color:black;padding:10px 10px 10px"></div>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
@@ -7,6 +85,8 @@
 <html>
 	<head>
         <script>
+
+
       let titles = ["I am a coder", "I am a student", "I am a learner"];
       let i = 0;
       
@@ -22,25 +102,92 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
 	</head>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  padding: 15px;
-  background-color: white;
-  color: black;
+  padding: 10px;
+  background-color: black;
+  color: white;
   font-size: 15px;
 }
 
 .dark-mode {
-  background-color: black;
+  background-color: white;
+  color: black;
+}
+</style>
+</head>
+</body>
+
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
   color: white;
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: black;
 }
 </style>
 </head>
 
+
+
+
 <body>
+
+
+<nav class="navbar">
+<div class="max-width">
+           
+            <ul class="menu active">
+<li><a href="https://drive.google.com/drive/folders/17Qjk7akNV0dKAbXjiOjGEoVI9Le8Njix?usp=share_link" target="blank" class="menu-btn"><strong>Resume</strong></a></li>
+
+                <li><a href="#contact" class="active"><strong>Contact</strong></a></li>
+                <li><a href="#links" class="menu-btn"><strong>Links</strong></a></li>
+               
+                <li><a href="#experience" class="menu-btn"><strong>Experiences</strong></a></li>
+
+<li><a href="#projects" class="menu-btn"><strong>Projects</strong></a></li>
+<li><a href="#education" class="menu-btn"><strong>Education</strong></a></li>
+                
+<li><a href="#about" class="menu-btn"><strong>About Me</strong></a></li>
+<li><a href="#home" class="menu-btn"><strong>Home</strong></a></li>
+            </ul>
+        
+        </div>
+</nav>
+
+</body>
+
+
+<body>
+
 <div>
 <button onclick="myFunction()">Mode<i style="font-size:13px" class="fa">&#xf186;</i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -51,6 +198,7 @@ function myFunction() {
 }
 </script>
 </body>
+
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -63,13 +211,7 @@ function myFunction() {
 									<span class="title"> Welcome to my Portfolio!</span>
 								</a>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
+							
 						</div>
 					</header>
 
@@ -81,16 +223,24 @@ function myFunction() {
 							<!-- <li><a href="generic.html">Extracurriculars</a></li>
 							<li><a href="Index2.html">UI/UX</a></li> -->
 						</ul>
-					</nav>
+					</nav> 
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner">
+						<div class="inner" style = "padding left:75px">
 							<header>
-								<h1>Hey! This is &nbsp;<a href="https://drive.google.com/drive/folders/17Qjk7akNV0dKAbXjiOjGEoVI9Le8Njix?usp=share_link"> Gopi Krishna</a>. </h1>
-								<p>Currently pursuing in the stream of Computer Science and Engineering at Lovely Professional University, Phagwara, Punjab. My acumen self is divinely inspired with the ideology 
-									to edify myself especially diverse elements of a larger whole. I was over prevaricated over my sanguine disposition and I was ubiquitous in nearly all fields. </p>
-									<h2 align="center"> Gallery</h2>
+								<h1>Hey! This is &nbsp;<a class="btn btn-dark btn-xl ml-2 mr-2 mb-3 about-btn" href="https://www.linkedin.com/in/gopi76/" target="_blank" > <i class="fa fa-file-pdf-o"></i>Gopi Krishna</a>. </h1>
+							<section class="about" id="about">	<p>👋I am from Guntur,Andhra Pradesh.</p>
+<p>💬 Currently i am studying Btech CSE [ 3rd year, June 2024  passed out(expected) ] at Lovely Professional University(Punjab), India.</p>
+ <p>👀 I’m always motivated  to apply my skills to solve the real world problems and to give better user experiences(using technologies like  AI/ML, Data science, Front - end)
+</p>
+<p>💡 Ask me about Python, Java, Data Science, Machine/Deep Learning</p>
+<p>⚒️ I’m currently working on the project chatbot and recommendation engine using ML. </p>
+<p> 📄 Know about my experiences <a href="https://drive.google.com/drive/folders/17Qjk7akNV0dKAbXjiOjGEoVI9Le8Njix?usp=share_link" target="_blank" style="color:white;"><strong> resume </strong></a>.</p>
+	<p>👯 Always looking for collaborate and interested to do Real time projects.  </p></section>
+
+								
+<section class="projects" id="projects"><h2 align="center"> My Projects</h2>
 							</header>
 							<section class="tiles">
 <article class="style5">
@@ -99,7 +249,7 @@ function myFunction() {
 									</span>
 									<a href="https://gopi76.github.io/Chatbot.github.io/">
 										<h2>bulit a Chatbot</h2>
-										<h3>Nov 2022 - PResent</h3>
+										<h3>Nov 2022 - Present</h3>
 										<div class="content">
 											<p>This chatbot was fully menu based and its user friendly for the student convienence. Its comes under the rule based chatbot (not a conversional bot)</p>
 										</div>
@@ -226,47 +376,64 @@ For user convenience, users can check every ML Algorithm model can able to view 
 							</section>
 						</div>
 					</div>
+</section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-                                                                        <li><a href="https://github.com/gopi76" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/gopi76/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.instagram.com/g_o_p_i_76/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									
-									<li><a href="gopikrishnaguntamukkala3@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="https://www.linkedin.com/in/gopi76/">G. Gopi Krishna</a></li>
-							</ul>
-						</div>
-					</footer>
 
-			</div>
+				
+			
 
+<section class="links" id="links">
+        <div class="max-width">
+            <h2 class="title" style="color:white"><center>
+                Links</center></h2>
+            <div class="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://github.com/gopi76" target="_blank" style="color:white;"><i class="fab fa-github colo" style="color:white;"></i> Github</a>
+                </div>
+                <div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://www.linkedin.com/in/gopi76/" target="_blank" style="color:white;"><i class="fab fa-linkedin colo" style="color:white;"></i> LinkedIN</a>
+                </div>
+                <div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://www.codechef.com/users/gopikrishna33" target="_blank" style="color:white;"><i class="fab fa-css3-alt" style="color:white;"></i> Codechef</a>
+                </div>
+                <div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://leetcode.com/gopi76/" target="_blank" style="color:white;"><i class="fab fa-bootstrap colo"></i> Leetcode</a>
+                </div>
+                <div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://codeforces.com/profile/funcoder3" target="_blank" style="color:white;"><i class="fab fa-js colo"></i> Codeforces</a>
+                </div>
+                <div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://auth.geeksforgeeks.org/user/funcoder3/practice/" target="_blank" style="color:white;"><i class="fab fa-css3-alt colo"></i> GeeksforGeeks</a>
+                </div>
+                <div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://www.hackerrank.com/gopi76" target="_blank" style="color:white;"><i class="fab fa-hackerrank colo"></i> HackerRank</a>
+                </div>
+<div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://twitter.com/GopiKri54478726" target="_blank" style="color:white;"><i class="fab fa-twitter colo" style="color:white;"></i> Twitter</a>
+                </div>
+<div class="various col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://www.instagram.com/g_o_p_i_76/" target="_blank" style="color:white;"><i class="fab fa-instagram colo" style="color:white;"></i> Instagram</a>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </section></div>
+
+
+</div> 
+
+<hr>
+<footer>
+        <p><strong><center>© Copyright 2022 Gopi Krishna<center></strong></p>
+
+
+    </footer>
+
+
+
+        
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -274,5 +441,31 @@ For user convenience, users can check every ML Algorithm model can able to view 
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
+<style type="text/css" data-typed-js-css="true">
+        .typed-cursor{
+          opacity: 1;
+        }
+        .typed-cursor.typed-cursor--blink{
+          animation: typedjsBlink 0.7s infinite;
+          -webkit-animation: typedjsBlink 0.7s infinite;
+                  animation: typedjsBlink 0.7s infinite;
+        }
+        @keyframes typedjsBlink{
+          50% { opacity: 0.0; }
+        }
+        @-webkit-keyframes typedjsBlink{
+          0% { opacity: 1; }
+          50% { opacity: 0.0; }
+          100% { opacity: 1; }
+        }
+      </style>
+
+
 	</body>
+
+
+
+
 </html>
+
