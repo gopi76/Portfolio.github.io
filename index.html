@@ -176,6 +176,85 @@ function closeNav() {
 
   </div>
   <div class="bottomleft">
+	  <html>
+<style>
+body{
+  background:rgba(0,0,0,0.91);
+} 
+#container {
+	display:flex;
+}
+#text {
+	display: inline-block;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 2.4rem;
+	font-weight: 600;
+	margin-top: 40%;
+	text-shadow: 0 5px 30px rgba(225, 345, 444,0.91);
+}
+#cursor {
+	display: inline-block;
+	width: 3px;
+	margin-top:40%;
+	height: 15px;
+	animation: blink .45s step-end infinite;
+}
+@keyframes blink {
+	from, to {background-color: transparent;}
+	50% {background-color: #fff;}
+}
+</style>
+
+<body>
+<div id="container">
+	<div id="text"></div>
+	<div id="cursor"></div>
+</div>
+</body>
+
+<script>
+var CONTENT = [ 
+        "Programmer",
+	"Learner",
+	"Student",
+  "ML Enthusiast",
+	"Computer Engineer"];
+var PART = 0;
+var PART_INDEX = 0;
+var INTERVAL_VAL;
+var ELEMENT = document.querySelector("#text");
+var CURSOR = document.querySelector("#cursor");
+function Type() { 	
+	var text =  CONTENT[PART].substring(0, PART_INDEX + 1);
+	ELEMENT.innerHTML = text;
+	PART_INDEX++;
+	if(text === CONTENT[PART]) {
+		CURSOR.style.display = 'none';
+		clearInterval(INTERVAL_VAL);
+		setTimeout(function() {
+			INTERVAL_VAL = setInterval(Delete, 50);
+		}, 1000);}}
+function Delete() {
+	var text =  CONTENT[PART].
+	substring(0, PART_INDEX - 1);
+	ELEMENT.innerHTML = text;
+	PART_INDEX--;
+	if(text === '') {
+		clearInterval(INTERVAL_VAL);
+		if(PART == (CONTENT.length - 1))
+			PART = 0;
+		else
+			PART++;
+		PART_INDEX = 0;		
+		setTimeout(function() {
+			CURSOR.style.display = 'inline-block';
+			INTERVAL_VAL = setInterval(Type, 100);
+		}, 200);}}
+INTERVAL_VAL = setInterval(Type, 100);
+</script>
+
+</html>   
     <p></p>
   </div>
 </div>
