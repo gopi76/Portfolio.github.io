@@ -7,6 +7,7 @@
 <head>
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .alert {
@@ -51,11 +52,11 @@
             background-color: #dbdbdb;
         }
 
-        .switch {
+        .switch1 {
             position: relative;
         }
 
-        .switch__input {
+        .switch1__input {
             position: absolute;
             top: 0;
             right: 0;
@@ -68,7 +69,7 @@
             z-index: 1;
         }
 
-        .switch__label {
+        .switch1__label {
             display: block;
             position: relative;
             width: 50px;
@@ -78,7 +79,7 @@
             transition: 0.4s;
         }
 
-        .switch__label::before {
+        .switch1__label::before {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -101,11 +102,11 @@
             box-sizing: border-box;
         }
 
-        .switch__input:checked + .switch__label {
+        .switch1__input:checked + .switch1__label {
             background-color: #dbdbdb;
         }
 
-        .switch__input:checked + .switch__label::before {
+        .switch1__input:checked + .switch1__label::before {
             left: calc(100% - 50px);
             border-color: #dbdbdb;
             background-color: #111;
@@ -121,16 +122,16 @@
             <ul class="menu active">
             <li>
                    
-                    <div class="switch">
-                        <input id="switch" class="switch__input" name="switch" type="checkbox">
-                        <label class="switch__label" for="switch">
+                    <div class="switch1">
+                        <input id="switch1" class="switch1__input" name="switch1" type="checkbox">
+                        <label class="switch1__label" for="switch1">
                             
                         </label>
                     </div>
                 
                 </li>
             
-<li><a href="https://drive.google.com/uc?export=download&id=1WvzrcAOyuVUWSZWFQyKcWdRIZbQZg431" target="blank" class="menu-btn"><strong>Download Resume</strong></a></li>
+<li><a href="https://drive.google.com/uc?export=download&id=1WvzrcAOyuVUWSZWFQyKcWdRIZbQZg431" target="blank" class="menu-btn"><strong><i class="fa fa-download"></i>Resume</strong></a></li>
 
                 <li><a href="#contact" class="active"><strong>Contact</strong></a></li>
                 <li><a href="#publications" class="menu-btn"><strong>Publications</strong></a></li>
@@ -149,8 +150,8 @@
         </div>
 </nav>
 <script>
-        document.querySelector("#switch").oninput = () => {
-            if (document.querySelector("#switch").checked == true) {
+        document.querySelector("#switch1").oninput = () => {
+            if (document.querySelector("#switch1").checked == true) {
                 document.querySelector("body").classList.add("light");
             } else {
                 document.querySelector("body").classList.remove("light");
@@ -529,7 +530,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 5px;
+  padding: 17px 5px;
   text-decoration: none;
 }
 
@@ -704,12 +705,119 @@ var typed = new Typed(".typing", {
  </p>
 <p> 📄 Know about my experiences <a class="btn btn-dark btn-xl ml-2 mr-2 mb-3 about-btn" href="https://drive.google.com/file/d/1Jzg3zBSHgOLvNBT82M9YNZ9M5k9-XjY_/view" download="" target="_blank"  style="color:white;"><strong>&nbsp;&nbsp;<i style="font-size:15px" class="fa"></i>&nbsp; resume </strong></a></p>
 	<p>📫 If you're interested in connecting or collaborating, feel free to reach out!:- gopikrishnaguntamukkala3@gmail.com </p></section>
+                      <style>
+.education,
+
+footer {
+  font-family: "Poppins", sans-serif;
+}
+.education .serv-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.education .title::after {
+  background: black;
+  content: "";
+}
+.education .serv-content .card {
+  width: calc(33% - 20px);
+  background-color: ;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.education .serv-content .card:hover {
+  background: crimson;
+}
+.education .serv-content .card .box1 {
+  transition: all 0.3s ease;
+}
+.education .serv-content .card:hover .box1 {
+  transform: scale(1.05);
+}
+.education .serv-content .card i {
+  font-size: 50px;
+  color: crimson;
+  transition: color 0.3s ease;
+}
+.education .serv-content .card:hover i {
+  color: #fff;
+}
+.education .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+</style>
 		
-								<section class="education" id="education"><h2 align="center"> Education</h2></header>
-<p><strong>10th    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2017-2018) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>:- Dr.K.K.R's Gowtham High School,Guntur  - (Grade - 10 cgpa)</p>
-<p><strong>Diploma &nbsp;(2018-2021) </strong>&nbsp;&nbsp;&nbsp; :- NTTF, &nbsp;Bangalore, &nbsp;Karnataka,&nbsp; India           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   - (Grade - 8.9 cgpa)</p>
-<p><strong>Btech  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2021-2024) </strong>&nbsp;&nbsp;&nbsp; :- Lovely Professional University,Punjab.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- (Grade - 7.68 cgpa) <strong>*till now</strong></p>
-</section>
+<section class="education">
+        <div class="max-width">
+            <center><h2 class="title">
+                Educational Qualifications</h2></center>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box1 ">
+                        <i class="fas fa-chart-line "></i>
+                        <div class="text">
+                            College</div>
+                        <p>
+                           Lovely Professional University, Punjab
+                            <br>
+                            ➤ Stream: Computer Science<br>
+                            ➤ Passing Year: 2024<br>
+                            ➤ CGPA: 7.68(till now)
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box1 ">
+                        <i class="fas fa-chart-line "></i>
+                        <div class="text">
+                          Diploma</div>
+                        <p>
+                            NTTF<br>(Karnataka)<br>
+                            ➤ Stream: Mechatronics<br>
+                            ➤ Passing Year: 2021<br>
+                            ➤ CGPA: 8.90
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box1 ">
+                        <i class="fas fa-chart-line "></i>
+                        <div class="text">
+                            Class X </div>
+                        <p>
+                             Dr.K.K.R's Gowtham High School<br>(Guntur, A.P)<br>
+                      
+                            ➤ Board: SSC<br>
+                            ➤ Passing Year: 2018<br>
+                        ➤ CGPA: 10
+                        </p>
+                    </div>
+                </div>
+                
+               
+                
+            </div>
+        </div>
+        
+    </section>
+
+
+
+
+
+
+
+
+
 
 
 								
@@ -851,6 +959,7 @@ language you wish to translate into. A language detector model that, after runni
 					</div>
 </section>
 
+
 <section class="skills" id="skills"><h2 align="center">Skills</h2></header>
 <p class ="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programming Languages &nbsp;:- &nbsp;</strong>&nbsp;C,&nbsp; C++,&nbsp; Python, &nbsp;Java, &nbsp;Kotlin(Basic)</p>
 <p class ="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Front End Languages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;Html,&nbsp; CSS, &nbsp;Javascript(Basic)</p>
@@ -861,7 +970,7 @@ language you wish to translate into. A language detector model that, after runni
 
 <section class="publications" id="skills"><h2 align="center">Publications</h2></header>
 <p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;Published a peer-reviewed paper on <strong>Multilingual NLP</strong> in  IJAENT Publications Journal,<a href="https://www.ijaent.org/portfolio-item/E41190612523/" target="_blank">&nbsp;<strong>Volume-10 Issue -6,&nbsp; June 2023.</strong></a></p></div>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;Term paper on <strong>Generative AI</strong> that have been peer evaluated and published (30th august,2023) in IJAENT Journals (high impact factor),&nbsp;<a href="https://www.ijaent.org/portfolio-item/G04740710723/" target="_blank">&nbsp;<strong>Volume-10 Issue-8,&nbsp; August 2023.</strong></a>  </p></div>
+<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;Term paper on <strong>Generative AI</strong> that have been peer evaluated and published (30th august,2023) in IJAENT Journals (<strong>high impact factor</strong>),&nbsp;<a href="https://www.ijaent.org/portfolio-item/G04740710723/" target="_blank">&nbsp;<strong>Volume-10 Issue-8,&nbsp; August 2023.</strong></a>  </p></div>
 </section>
 		
 <section class="experience" id="experience">
