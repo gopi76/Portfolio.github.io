@@ -1052,8 +1052,8 @@ language you wish to translate into. A language detector model that, after runni
 <style>
 #scroll {
     position:fixed;
-    right:10px;
-    bottom:10px;
+    right:30px;
+    bottom:100px;
     content: "\f077";
     width:50px;
     height:50px;
@@ -1133,4 +1133,69 @@ $(document).ready(function(){
 
 <a href="#" id="scroll" style="display: none;"><span></span> 
 	</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+
+<script>
+  /* paste this in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
+
+  /* customize formbutton here*/     
+  formbutton("create", {
+    action: "https://formspree.io/mknlgkqo",
+    title: "How can i help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" 
+      }      
+    ],
+    styles: {
+        title: {
+          backgroundColor: "blue"
+        },
+        button: {
+          backgroundColor: "crimson",
+          borderRadius: "50px", /* Add this line to make the button rounded */
+          padding: "15px 20px", /* Optional: Adjust padding to your preference */
+          color: "#fff", /* Optional: Change text color to improve contrast */
+          fontSize: "16px" /* Optional: Change font size to your preference */
+        }
+      },
+    Visible: true
+  });
+</script>
 </html>
