@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html>
-<html lang="en">
-
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.loader1 {
+	 position: relative;
+	 width: 2.5em;
+	 height: 2.5em;
+	 transform: rotate(165deg);
+}
+.loader1:before, .loader1:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 display: block;
+	 width: 0.5em;
+	 height: 0.5em;
+	 border-radius: 0.25em;
+	 transform: translate(-50%, -50%);
+}
+.loader1:before {
+	 animation: before 2s infinite;
+}
+.loader1:after {
+	 animation: after 2s infinite;
+}
+@keyframes before {
+	 0% {
+		 width: 0.5em;
+		 box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+	}
+	 35% {
+		 width: 2.5em;
+		 box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+	}
+	 70% {
+		 width: 0.5em;
+		 box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+	}
+	 100% {
+		 box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+	}
+}
+@keyframes after {
+	 0% {
+		 height: 0.5em;
+		 box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+	}
+	 35% {
+		 height: 2.5em;
+		 box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+	}
+	 70% {
+		 height: 0.5em;
+		 box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+	}
+	 100% {
+		 box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+	}
+}
+/** * Attempt to center the whole thing! */
+html, body {
+	 height: 100%;
+}
+.loader1 {
+	 position: absolute;
+	 top: calc(50% - 1.25em);
+	 left: calc(50% - 1.25em);
+}
+#myDiv {
+  display: none;
+ 
+}
+</style>
+
+
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div class="loader1" id="loader1"></div>
+
+ <div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <html lang="en"><head>
     <!-- Include Font Awesome CSS -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -33,9 +115,67 @@
   color: black;
 }
 </style>
-</head>
-<body>
+<style>#formbutton-button:focus{outline:0}::-moz-focus-inner{border:0;}</style></head>
+<body class="">
 <style>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0px;
+}
+
+.bgimg {
+  background-image: url("https://raw.githubusercontent.com/gopi76/Portfolio.github.io/main/images/forestbridge.jpg");
+  height: 100vh;
+  width:100vw;
+  background-position: center;
+  background-size: 100% auto;
+ background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+.topright {
+  position: absolute;
+  top: 0;
+  right: 16px;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr1 {
+  margin: auto;
+  width: 40%;
+}
+#myDiv {
+  display: none;
+ 
+}
+</style>
+
+
+
+
+
 <style>
     
         body {
@@ -118,6 +258,7 @@
 
 </style>
 
+
 <nav class="navbar">
 <div class="max-width">
            
@@ -133,7 +274,7 @@
                 
                 </li>
             
-<li><a href="https://drive.google.com/uc?export=download&id=1WvzrcAOyuVUWSZWFQyKcWdRIZbQZg431" target="blank" class="menu-btn"><strong><i class="fa fa-download"></i>Resume</strong></a></li>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=1WvzrcAOyuVUWSZWFQyKcWdRIZbQZg431" target="blank" class="menu-btn"><strong><i class="fa fa-download"></i>Resume</strong></a></li>
 
                 <li><a href="#contact" class="active"><strong>Contact</strong></a></li>
                 <li><a href="#publications" class="menu-btn"><strong>Publications</strong></a></li>
@@ -163,65 +304,20 @@
 
 
 <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span> 
   <strong>Note!</strong> For instant replies, message through LinkedIn or Email.
 </div>
 
-</body>
-</html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
 
-.bgimg {
-  background-image: url("images/forestbridge.jpg");
-  height: 100%;
-  width:100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-.topright {
-  position: absolute;
-  top: 0;
-  right: 16px;
-}
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
-hr1 {
-  margin: auto;
-  width: 40%;
-}
-</style>
-<body>
+
 
 <div class="bgimg">
   <div class="topleft">
-  <html>
-<head>
+  
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -275,11 +371,11 @@ body {
   }
 }
 </style>
-</head>
-<body>
+
+
 
 <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <div class="overlay-content">
     <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/bZqMjsPgUtI" width="700" height="390" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div><br>
 
@@ -287,8 +383,8 @@ body {
 </div>
 
 
-<span style="font-size:15px;cursor:pointer" onclick="openNav()"> <h1>Welcome</h1></span>
-
+<span style="font-size:15px;cursor:pointer" onclick="openNav()"> <h1>Welcome</h1></span>  
+ 
 <script>
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
@@ -299,25 +395,25 @@ function closeNav() {
 }
 </script>
      
-</body>
-</html>
+
+
     
     <p></p>
   </div>
   <div class="middle">
    
-    <p font size="26"><h1>Portfolio</h1>
-    <p class="small"><center></center></p>
-    <!DOCTYPE html>
+    <p font="" size="26"></p><h1>Portfolio</h1>
+    <p class="small"></p><center></center><p></p>
+    
 </div>
 <div class="topright">
     <!-- hitwebcounter Code START -->
 <a href="https://www.hitwebcounter.com" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=8397832&style=0001&nbdigits=5&type=ip&initCount=1000" title="Free Counter" font-size:15px; Alt="web counter"   border="0" /></a>               
+<img src="https://hitwebcounter.com/counter/counter.php?page=8397832&amp;style=0001&amp;nbdigits=5&amp;type=ip&amp;initCount=1000" title="Free Counter" font-size:15px;="" alt="web counter" border="0"></a>               
   </div>
   </div>
   <div class="bottomleft">
-	  <html>
+	  
 <style>
 body{
   background:rgba(0,0,0,0.91);
@@ -347,12 +443,12 @@ body{
 }
 </style>
 
-<body>
+
 <div id="container">
-	<div id="text"></div>
-	<div id="cursor"></div>
+	<div id="text">Pro</div>
+	<div id="cursor" style="display: inline-block;"></div>
 </div>
-</body>
+
 
 <script>
 var CONTENT = [ 
@@ -395,20 +491,20 @@ function Delete() {
 INTERVAL_VAL = setInterval(Type, 100);
 </script>
 
-</html>   
+   
     <p></p>
   </div>
-</div>
-
-</body>
-</html>
 
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
+
+
+
+
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -424,8 +520,8 @@ body {
   border-radius: 50%;
 }
 </style>
-</head>
-<body>
+
+
 
 
 
@@ -454,10 +550,6 @@ function topFunction() {
 }
 </script>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html>
 
 
 
@@ -473,29 +565,29 @@ function topFunction() {
 
 
 
-<html>
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
+
+
+
+
+
+
+
+
+	
         
 
 		<title>Gopi Krishna Portfolio</title>
                 
                 
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="icon" type="image/x-icon" href="https://github.com/saadpasta/developerFolio/blob/master/public/favicon-16x16.png"/>
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="icon" type="image/x-icon" href="https://github.com/saadpasta/developerFolio/blob/master/public/favicon-16x16.png">
+		<link rel="stylesheet" href="assets/css/main.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 
-	</head>
-<head>
+	
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -511,10 +603,10 @@ body {
   color: black;
 }
 </style>
-</head>
-</body>
 
-<head>
+
+
+
 <style>
 ul {
   list-style-type: none;
@@ -610,20 +702,20 @@ p.small {
 }
 
 </style>
-</head>
 
 
 
 
-<body>
 
 
 
 
-</body>
 
 
-<body>
+
+
+
+
 
 <div>
 
@@ -646,10 +738,10 @@ var typed = new Typed(".typing", {
   });
 </script>
 
-</body>
 
 
-	<body class="is-preload">
+
+	
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->
@@ -664,24 +756,17 @@ var typed = new Typed(".typing", {
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<!-- <li><a href="generic.html">Extracurriculars</a></li>
-							<li><a href="Index2.html">UI/UX</a></li> -->
-						</ul>
-					</nav> 
+					 
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner" style = "padding left:75px">
+						<div class="inner" style="padding left:75px">
 							<header>
 							<!--	<h1>Hey! This is &nbsp;<a class="logo" tag="[object Object]" href="#/assests/splash"><span style="color: rgb(20, 33, 61);"> &lt;</span></h1> -->
 
 								<h1>Hey! This is &nbsp;<a class="btn btn-dark btn-xl ml-2 mr-2 mb-3 about-btn" href="https://www.linkedin.com/in/gopi76/" target="_blank" color="red"> Gopi Krishna</a>. </h1>							
 <section class="about" id="about">	<p>👋 Hi, I’m Gopi Krishna from Guntur, &nbsp;Andhra Pradesh.
-<div class="flip-card">
+</p><div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <img src="images/gopi.png" alt="Avatar" class="avatar" style="float: right; margin-right: 15px;">
@@ -690,15 +775,15 @@ var typed = new Typed(".typing", {
       <h3>"The only way to do great work is to love what you do." - Steve Jobs</h3>  
     </div>
   </div>
-</div></body></p>
+</div><p></p>
 
 <p>💬 I'm currently pursuing the stream of Computer Science and Engineering at Lovely Professional University(Punjab), India. </p>
- <p>👨‍💻 My technical skills include proficiency in C,&nbsp; C++,&nbsp; Java,&nbsp; Python and basic knowledge of Kotlin. I'm also familiar with &nbsp;front-end languages such as HTML,&nbsp; CSS,&nbsp; JavaScript.
+ <p>👨&zwj;💻 My technical skills include proficiency in C,&nbsp; C++,&nbsp; Java,&nbsp; Python and basic knowledge of Kotlin. I'm also familiar with &nbsp;front-end languages such as HTML,&nbsp; CSS,&nbsp; JavaScript.
 </p>
 <p>💡 Ask me about Python, Java, Data Science, AI, Machine/Deep Learning, NLP. </p>
 <p>🔮 In terms of leadership, I have participated in GDSC-LPU as a part of the A.I/ML team member, where I assisted machine learning in simpler methods while mentoring the mentee and explored different concepts of ML.
  </p>
-<p> 📄 Know about my experiences <a class="btn btn-dark btn-xl ml-2 mr-2 mb-3 about-btn" href="https://drive.google.com/file/d/1Jzg3zBSHgOLvNBT82M9YNZ9M5k9-XjY_/view" download="" target="_blank"  style="color:white;"><strong>&nbsp;&nbsp;<i style="font-size:15px" class="fa"></i>&nbsp; resume </strong></a></p>
+<p> 📄 Know about my experiences <a class="btn btn-dark btn-xl ml-2 mr-2 mb-3 about-btn" href="https://drive.google.com/file/d/1Jzg3zBSHgOLvNBT82M9YNZ9M5k9-XjY_/view" download="" target="_blank" style="color:white;"><strong>&nbsp;&nbsp;<i style="font-size:15px" class="fa"></i>&nbsp; resume </strong></a></p>
 	<p>📫 If you're interested in connecting or collaborating, feel free to reach out!:- gopikrishnaguntamukkala3@gmail.com </p></section>
                       <style>
 .education,
@@ -809,11 +894,11 @@ footer {
 
 								
 <section class="projects" id="projects"><h2 align="center"> My Projects</h2>
-							</header>
+							</section></header>
 							<section class="tiles">
 <article class="style5">
 									<span class="image">
-										<img src="images/chatbot3.png" alt="" />
+										<img src="images/chatbot3.png" alt="">
 									</span>
 									<a href="https://gopi76.github.io/Chatbot.github.io/" target="_blank">
 										<h2>bulit a Chatbot</h2>
@@ -825,7 +910,7 @@ footer {
 								</article>
 								<article class="style1">
 									<span class="image">
-										<img src="images/product.jpeg" alt="Main Screen- Product Recommendation System" />
+										<img src="images/product.jpeg" alt="Main Screen- Product Recommendation System">
 									</span>
 									<a href="https://github.com/gopi76/Product-Recommendation-System" target="_blank">
 										<h2>Product Recommendation System </h2>
@@ -837,7 +922,7 @@ footer {
 								</article>
 								<article class="style2">
 									<span class="image">
-										<img src="images/language.png" alt="" />
+										<img src="images/language.png" alt="">
 									</span>
 									<a href="https://github.com/gopi76/Language-Detection" target="_blank">
 										<h2>Language Detection</h2>
@@ -850,7 +935,7 @@ language you wish to translate into. A language detector model that, after runni
 								</article>
 								<article class="style3">
 									<span class="image">
-										<img src="images/bitcoin11.jpg" alt="" />
+										<img src="images/bitcoin11.jpg" alt="">
 									</span>
 									<a href="https://github.com/gopi76/Bitcoin-price-prediction-and-analysis-" target="_blank">
 										<h2>Bitcoin Price prediction and analysis webpage</h2>
@@ -862,7 +947,7 @@ language you wish to translate into. A language detector model that, after runni
 								</article>
 								<article class="style4">
 									<span class="image">
-										<img src="images/health.jpeg" alt="" />
+										<img src="images/health.jpeg" alt="">
 									</span>
 									<a href="https://github.com/gopi76/Health-Insurance-Premium-Prediction" target="_blank">
 										<h2>health insurance premium prediction</h2>
@@ -876,7 +961,7 @@ language you wish to translate into. A language detector model that, after runni
 								
 								<article class="style2">
 									<span class="image">
-										<img src="images/gender.jpeg" alt="" />
+										<img src="images/gender.jpeg" alt="">
 									</span>
 									<a href="https://github.com/gopi76/Real-Time-Gender-Detection-Project" target="_blank">
 										<h2>Real time gender detection</h2>
@@ -944,43 +1029,43 @@ language you wish to translate into. A language detector model that, after runni
 							</section>
 						</div>
 					</div>
-</section>
 
 
-<section class="skills" id="skills"><h2 align="center">Skills</h2></header>
-<p class ="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programming Languages &nbsp;:- &nbsp;</strong>&nbsp;C,&nbsp; C++,&nbsp; Python, &nbsp;Java, &nbsp;Kotlin(Basic)</p>
-<p class ="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Front End Languages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;Html,&nbsp; CSS, &nbsp;Javascript(Basic)</p>
-<p class ="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Libraries/Frameworks &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;&nbsp;&nbsp;Tkinter,&nbsp; Pandas,&nbsp; Numpy,&nbsp; Seaborn,&nbsp; Matplotlib,&nbsp; Sklearn,&nbsp; ML algorithms,&nbsp; Nltk,&nbsp; Pytorch,&nbsp; Tensorflow</p>
-<p class ="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tools / Platforms &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;&nbsp;&nbsp;Git/GitHub,&nbsp; Visual Studio,&nbsp; Eclipse,&nbsp; Jupiter Notebook,&nbsp; Google Colab,&nbsp; Sublime Text,&nbsp; Intellij IDEA</p>
-<p class ="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Related Course Work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;&nbsp;&nbsp;Data Structures &nbsp;&&nbsp; Algorithms,&nbsp; DBMS,&nbsp; OS,&nbsp; Computer Networks,&nbsp; Artificial Intelligence</p></div>
-</section>
 
-<section class="publications" id="skills"><h2 align="center">Publications</h2></header>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;Published a peer-reviewed paper on <strong>Multilingual NLP</strong> in  IJAENT Publications Journal,<a href="https://www.ijaent.org/portfolio-item/E41190612523/" target="_blank">&nbsp;<strong>Volume-10 Issue -6,&nbsp; June 2023.</strong></a></p></div>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;Term paper on <strong>Generative AI</strong> that have been peer evaluated and published (30th august,2023) in IJAENT Journals (<strong>high impact factor</strong>),&nbsp;<a href="https://www.ijaent.org/portfolio-item/G04740710723/" target="_blank">&nbsp;<strong>Volume-10 Issue-8,&nbsp; August 2023.</strong></a>  </p></div>
-</section>
+<section class="skills" id="skills"><h2 align="center">Skills</h2>
+<p class="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programming Languages &nbsp;:- &nbsp;</strong>&nbsp;C,&nbsp; C++,&nbsp; Python, &nbsp;Java, &nbsp;Kotlin(Basic)</p>
+<p class="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Front End Languages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;Html,&nbsp; CSS, &nbsp;Javascript(Basic)</p>
+<p class="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Libraries/Frameworks &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;&nbsp;&nbsp;Tkinter,&nbsp; Pandas,&nbsp; Numpy,&nbsp; Seaborn,&nbsp; Matplotlib,&nbsp; Sklearn,&nbsp; ML algorithms,&nbsp; Nltk,&nbsp; Pytorch,&nbsp; Tensorflow</p>
+<p class="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tools / Platforms &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;&nbsp;&nbsp;Git/GitHub,&nbsp; Visual Studio,&nbsp; Eclipse,&nbsp; Jupiter Notebook,&nbsp; Google Colab,&nbsp; Sublime Text,&nbsp; Intellij IDEA</p>
+<p class="small"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Related Course Work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- </strong>&nbsp;&nbsp;&nbsp;Data Structures &nbsp;&amp;&nbsp; Algorithms,&nbsp; DBMS,&nbsp; OS,&nbsp; Computer Networks,&nbsp; Artificial Intelligence</p></section></div>
+
+
+<section class="publications" id="skills"><h2 align="center">Publications</h2>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;Published a peer-reviewed paper on <strong>Multilingual NLP</strong> in  IJAENT Publications Journal,<a href="https://www.ijaent.org/portfolio-item/E41190612523/" target="_blank">&nbsp;<strong>Volume-10 Issue -6,&nbsp; June 2023.</strong></a></p></section></div>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;Term paper on <strong>Generative AI</strong> that have been peer evaluated and published (30th august,2023) in IJAENT Journals (<strong>high impact factor</strong>),&nbsp;<a href="https://www.ijaent.org/portfolio-item/G04740710723/" target="_blank">&nbsp;<strong>Volume-10 Issue-8,&nbsp; August 2023.</strong></a>  </p>
+
 		
 <section class="experience" id="experience">
 <div class="max-width">
-<h2 class="title" style="color:white"><center>Experience</center></a></h2>
+<h2 class="title" style="color:white"><center>Experience</center></h2>
 <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allsoft Solutions Pvt Ltd</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i>(ML Intern)</i><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;June&nbsp; 2022&nbsp; - &nbsp;July&nbsp; 2022</strong></p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; I participated in the projects as a ML intern.</p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Added to numerous features, with asset global search being the most significant one</p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Has experience using machine learning methods/algorithms.</p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; I participated in the projects as a ML intern.</p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Added to numerous features, with asset global search being the most significant one</p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Has experience using machine learning methods/algorithms.</p>
 
 
 <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Position Of Responsibilities</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i>(GDSC LPU)</i><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sept&nbsp; 2022&nbsp; - &nbsp;Feb&nbsp; 2023</strong></p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Participated in GDSC-LPU as a part of the A.I/ML team member.  </p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Assisting machine learning in simpler methods while mentoring the mentees</p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;  Explored the different concepts of Machine Learning.</p>
-</section>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Participated in GDSC-LPU as a part of the A.I/ML team member.  </p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Assisting machine learning in simpler methods while mentoring the mentees</p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;  Explored the different concepts of Machine Learning.</p>
+</div></section>
 
 				
 			
 
 <section class="links" id="links">
         <div class="max-width">
-            <h2 class="title" style="color:white"><center><a href="https://linktr.ee/gopikrishna76" target="_blank">Links</center></a></h2>
+            <h2 class="title" style="color:white"><center><a href="https://linktr.ee/gopikrishna76" target="_blank">Links</a></center></h2>
             <div class="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="various col-lg-3 col-md-4 col-sm-6">
                     <a href="https://github.com/gopi76" target="_blank" style="color:white;"><i class="fab fa-github colo" style="color:white;"></i> Github</a>
@@ -1014,37 +1099,39 @@ language you wish to translate into. A language detector model that, after runni
         </div>
 
         
-    </section></div>
+    </section>
 <br>
 
 <section class="achievements" id="achievements">
-      <h2 class="title" style="color:white"><center><a href="https://www.credly.com/users/guntamukkala-gopi-krishna" target="_blank">Achievements</center></a></h2>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; MTA Programming using Python – Certified <strong>&nbsp; 2022</strong> &nbsp;<a href="https://www.credly.com/badges/61e0280b-b7f5-4d48-8a31-1508dc6554bc/public_url"><strong>(Issued by Microsoft) </strong></a> </p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Secured overall rank <strong>&nbsp;78</strong> (in platform) and top <strong>&nbsp;10</strong> (out of <strong>&nbsp;18k+</strong> in college) in GFG coding platform</p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Awarded a <strong>&nbsp;5</strong> star rating (one gold medal) on HackerRank</p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Mentored <strong>160+</strong> students in learning the concepts of DSA & Machine learning organized by the GDSC-LPU.</p>
-<p class ="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Solved over <strong>&nbsp; 1125+</strong> problems on GFG and <strong>&nbsp; 97+</strong> on Leetcode coding platforms</p>
+      <h2 class="title" style="color:white"><center><a href="https://www.credly.com/users/guntamukkala-gopi-krishna" target="_blank">Achievements</a></center></h2>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; MTA Programming using Python – Certified <strong>&nbsp; 2022</strong> &nbsp;<a href="https://www.credly.com/badges/61e0280b-b7f5-4d48-8a31-1508dc6554bc/public_url"><strong>(Issued by Microsoft) </strong></a> </p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Secured overall rank <strong>&nbsp;78</strong> (in platform) and top <strong>&nbsp;10</strong> (out of <strong>&nbsp;18k+</strong> in college) in GFG coding platform</p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Awarded a <strong>&nbsp;5</strong> star rating (one gold medal) on HackerRank</p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Mentored <strong>160+</strong> students in learning the concepts of DSA &amp; Machine learning organized by the GDSC-LPU.</p>
+<p class="small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp; Solved over <strong>&nbsp; 1125+</strong> problems on GFG and <strong>&nbsp; 97+</strong> on Leetcode coding platforms</p>
 
 </section>
 
-<section class="contact" id="contact"><h2 align="center">Contact Address</h2></header>
+<section class="contact" id="contact"><h2 align="center">Contact Address</h2>
 <address>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Contact Address&nbsp;:-&nbsp;</strong> &nbsp;26-55-1,&nbsp; Venkata Krishna Puram, &nbsp;Peddakakani (&nbsp;Mandal&nbsp;),&nbsp; Guntur (&nbsp;District&nbsp;),&nbsp; Andhra Pradesh, &nbsp;India &nbsp;-&nbsp; 522&nbsp; 509.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Mobile Number&nbsp;&nbsp;:-</strong> 📱 +91 7659046696 &nbsp;&nbsp;&nbsp;📧<strong><a href="mailto:gopikrishnaguntamukkala3@gmail.com">&nbsp;Gmail to me</strong></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Mobile Number&nbsp;&nbsp;:-</strong> 📱 +91 7659046696 &nbsp;&nbsp;&nbsp;📧<strong><a href="mailto:gopikrishnaguntamukkala3@gmail.com">&nbsp;Gmail to me</a></strong><br>
 </address>
 
 </section>
-</div> 
+ 
 
 <hr>
 <footer>
-        <p><strong><center>© Copyright 2022 Gopi Krishna Portfolio<center></strong></p>
-<audio controls autoplay>
+        <p><strong></strong></p><center><strong>© Copyright 2022 Gopi Krishna Portfolio</strong><center><strong></strong><p></p>
+<audio controls="" autoplay="">
   <source src="Priya_Mithunam.ogg" type="audio/ogg">
   <source src="Priya_Mithunam.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-    </footer>
+    </center></center></footer> 
+</div>
+</body>
 
 
 
@@ -1054,7 +1141,14 @@ Your browser does not support the audio element.
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script><nav id="menu"><div class="inner">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<!-- <li><a href="generic.html">Extracurriculars</a></li>
+							<li><a href="Index2.html">UI/UX</a></li> -->
+						</ul>
+					</div><a class="close" href="#menu">Close</a></nav>
 <style>
 #scroll {
     position:fixed;
@@ -1138,7 +1232,7 @@ $(document).ready(function(){
       </style>
 
 <a href="#" id="scroll" style="display: none;"><span></span> 
-	</body>
+	
 
 
 
@@ -1162,7 +1256,7 @@ $(document).ready(function(){
 
 
 
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer=""></script>
 
 <script>
   /* paste this in verbatim */
@@ -1204,4 +1298,420 @@ $(document).ready(function(){
     Visible: true
   });
 </script>
+
+</a><div id="formbutton-container"><iframe id="formbutton-iframe" width="1280" height="613" src="data:text/html,%0A%20%20%20%20%20%20%3Chtml%3E%0A%20%20%20%20%20%20%20%20%3Chead%3E%0A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%3Cstyle%3E%0A%2F*%0Ahtml5doctor.com%20Reset%20Stylesheet%0Av1.6.1%0ALast%20Updated%3A%202010-09-17%0AAuthor%3A%20Richard%20Clark%20-%20http%3A%2F%2Frichclarkdesign.com%0ATwitter%3A%20%40rich_clark%0A*%2F%0A%0Ahtml%2C%20body%2C%20div%2C%20span%2C%20object%2C%20iframe%2C%0Ah1%2C%20h2%2C%20h3%2C%20h4%2C%20h5%2C%20h6%2C%20p%2C%20blockquote%2C%20pre%2C%0Aabbr%2C%20address%2C%20cite%2C%20code%2C%0Adel%2C%20dfn%2C%20em%2C%20img%2C%20ins%2C%20kbd%2C%20q%2C%20samp%2C%0Asmall%2C%20strong%2C%20sub%2C%20sup%2C%20var%2C%0Ab%2C%20i%2C%0Adl%2C%20dt%2C%20dd%2C%20ol%2C%20ul%2C%20li%2C%0Afieldset%2C%20form%2C%20label%2C%20legend%2C%0Atable%2C%20caption%2C%20tbody%2C%20tfoot%2C%20thead%2C%20tr%2C%20th%2C%20td%2C%0Aarticle%2C%20aside%2C%20canvas%2C%20details%2C%20figcaption%2C%20figure%2C%0Afooter%2C%20header%2C%20hgroup%2C%20menu%2C%20nav%2C%20section%2C%20summary%2C%0Atime%2C%20mark%2C%20audio%2C%20video%20%7B%0A%20%20%20%20margin%3A0%3B%0A%20%20%20%20padding%3A0%3B%0A%20%20%20%20border%3A0%3B%0A%20%20%20%20font-size%3A100%25%3B%0A%20%20%20%20vertical-align%3Abaseline%3B%0A%20%20%20%20background%3Atransparent%3B%0A%7D%0Abody%20%7B%0A%20%20%20%20line-height%3A1%3B%0A%7D%0Aarticle%2Caside%2Cdetails%2Cfigcaption%2Cfigure%2C%0Afooter%2Cheader%2Chgroup%2Cmenu%2Cnav%2Csection%20%7B%0A%20%20%20%20display%3Ablock%3B%0A%7D%0Anav%20ul%2Cnav%20ol%2Cnav%20dl%20%7B%0A%20%20%20%20list-style%3Anone%3B%0A%7D%0Ablockquote%2C%20q%20%7B%0A%20%20%20%20quotes%3Anone%3B%0A%7D%0Ablockquote%3Abefore%2C%20blockquote%3Aafter%2C%0Aq%3Abefore%2C%20q%3Aafter%20%7B%0A%20%20%20%20content%3A''%3B%0A%20%20%20%20content%3Anone%3B%0A%7D%0Aa%20%7B%0A%20%20%20%20margin%3A0%3B%0A%20%20%20%20padding%3A0%3B%0A%20%20%20%20font-size%3A100%25%3B%0A%20%20%20%20vertical-align%3Abaseline%3B%0A%20%20%20%20background%3Atransparent%3B%0A%7D%0Ains%20%7B%0A%20%20%20%20background-color%3A%23ff9%3B%0A%20%20%20%20color%3A%23000%3B%0A%20%20%20%20text-decoration%3Anone%3B%0A%7D%0Amark%20%7B%0A%20%20%20%20background-color%3A%23ff9%3B%0A%20%20%20%20color%3A%23000%3B%0A%20%20%20%20font-style%3Aitalic%3B%0A%20%20%20%20font-weight%3Abold%3B%0A%7D%0Adel%20%7B%0A%20%20%20%20text-decoration%3A%20line-through%3B%0A%7D%0Aabbr%5Btitle%5D%2C%20dfn%5Btitle%5D%20%7B%0A%20%20%20%20border-bottom%3A1px%20dotted%3B%0A%20%20%20%20cursor%3Ahelp%3B%0A%7D%0Atable%20%7B%0A%20%20%20%20border-collapse%3Acollapse%3B%0A%20%20%20%20border-spacing%3A0%3B%0A%7D%0Ahr%20%7B%0A%20%20%20%20display%3Ablock%3B%0A%20%20%20%20height%3A1px%3B%0A%20%20%20%20border%3A0%3B%0A%20%20%20%20border-top%3A1px%20solid%20%23cccccc%3B%0A%20%20%20%20margin%3A1em%200%3B%0A%20%20%20%20padding%3A0%3B%0A%7D%0Ainput%2C%20select%20%7B%0A%20%20%20%20vertical-align%3Amiddle%3B%0A%7D%0A%0A%3C%2Fstyle%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstyle%3E%0Abody%20%7B%0A%20%20font-family%3A%20sans-serif%3B%0A%20%20font-size%3A%20100%25%3B%0A%20%20line-height%3A%201%3B%0A%20%20font-weight%3A%20400%3B%0A%7D%0A%0A%23formbutton-shim%20%7B%0A%20%20position%3A%20fixed%3B%0A%20%20top%3A%200%3B%0A%20%20bottom%3A%200%3B%0A%20%20right%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20background%3A%20rgba(0%2C%200%2C%200%2C%200.1)%3B%0A%20%20cursor%3A%20pointer%3B%0A%7D%0A%0A%23formbutton-modalContainer%20%7B%0A%20%20position%3A%20fixed%3B%0A%20%20width%3A%20320px%3B%0A%20%20right%3A%2022px%3B%0A%20%20bottom%3A%20104px%3B%0A%20%20transform%3A%20translate(0%2C%205%25)%3B%0A%20%20transition-property%3A%20transform%3B%0A%20%20transition-duration%3A%200.2s%3B%0A%20%20transition-timing-function%3A%20ease-out%3B%0A%20%20cursor%3A%20default%3B%0A%7D%0A%0A%40media(max-width%3A%20480px)%20%7B%0A%20%20%23formbutton-modalContainer%20%7B%0A%20%20%20%20width%3A%20276px%3B%0A%20%20%7D%0A%7D%0A%0A%40media%20(max-width%3A%20375px)%20%7B%0A%20%20%23formbutton-modalContainer%20%7B%0A%20%20%20%20width%3A%20100%25%20!important%3B%0A%20%20%20%20left%3A%200%20!important%3B%0A%20%20%20%20right%3A%200%20!important%3B%0A%20%20%20%20bottom%3A%200%20!important%3B%0A%20%20%7D%0A%7D%0A%0A%23formbutton-modalContainer.visible%20%7B%0A%20%20transform%3A%20translate(0%2C%200)%3B%0A%7D%0A%0A%23formbutton-modal%20%7B%0A%20%20background%3A%20white%3B%0A%20%20border-radius%3A%2012px%3B%0A%20%20box-shadow%3A%205px%205px%2022px%20rgba(22%2C%2022%2C%2022%2C%200.2)%3B%0A%20%20line-height%3A%201.2%3B%0A%20%20overflow%3A%20auto%3B%0A%20%20max-height%3A%20100vh%3B%0A%7D%0A%0A%23formbutton-title%20%7B%0A%20%20padding%3A%20%2016px%2016px%3B%0A%20%20background%3A%20%23c4001a%3B%0A%20%20border-radius%3A%2012px%2012px%200%200%3B%0A%20%20color%3A%20white%3B%0A%20%20font-weight%3A%20bold%3B%0A%20%20font-size%3A%201.2rem%3B%0A%20%20display%3A%20flex%3B%0A%20%20align-items%3A%20center%3B%0A%7D%0A%0A%23formbutton-title.empty%20%7B%0A%20%20justify-content%3A%20flex-end%3B%0A%7D%0A%0A%40media(min-width%3A%20375px)%20%7B%0A%20%20%23formbutton-title.empty%20%7B%0A%20%20%20%20display%3A%20none%3B%0A%20%20%7D%0A%7D%0A%0A%23formbutton-title%20i%20%7B%0A%20%20font-size%3A%202rem%3B%0A%20%20margin-right%3A%201rem%3B%0A%20%20font-style%3A%20normal%3B%0A%7D%0A%0A%23formbutton-closeButton%20%7B%0A%20%20margin-left%3A%20auto%3B%0A%20%20color%3A%20transparent%3B%20%20%0A%20%20background%3A%20transparent%3B%0A%20%20border%3A%20none%3B%0A%20%20text-shadow%3A%0A%20%20%20%200%200%200%20white%2C%0A%20%20%20%20-1px%20-1px%200%20rgba(0%2C0%2C0%2C%200.2)%2C%20%20%0A%20%20%20%201px%20-1px%200%20rgba(0%2C0%2C0%2C%200.2)%2C%0A%20%20%20%20-1px%201px%200%20rgba(0%2C0%2C0%2C%200.2)%2C%0A%20%20%20%201px%201px%200%20rgba(0%2C0%2C0%2C%200.2)%3B%20%20%0A%20%20appearance%3A%20none%3B%0A%20%20-moz-appearance%3A%20none%3B%0A%20%20-webkit-appearance%3A%20none%3B%0A%20%20cursor%3A%20pointer%3B%0A%7D%0A%0A%23formbutton-closeButton%3A%3Aafter%20%7B%0A%20%20content%3A%20%22%E2%9D%8C%22%0A%7D%0A%0A%23formbutton-description%20%7B%0A%20%20padding%3A%200%2040px%2016px%2016px%3B%0A%20%20background%3A%20%23c4001a%3B%0A%20%20color%3A%20rgba(255%2C%20255%2C%20255%2C%200.8)%3B%0A%20%20font-size%3A%20smaller%3B%0A%20%20line-height%3A%201.25%3B%0A%7D%0A%0A%23formbutton-body%20%7B%0A%20%20padding%3A%2016px%3B%0A%7D%0A%0A%23formbutton-formContainer%20%7B%0A%20%20position%3A%20relative%3B%0A%7D%0A%0A%23formbutton-formStatus%20%7B%0A%20%20position%3A%20absolute%3B%0A%20%20display%3A%20flex%3B%0A%20%20flex-direction%3A%20column%3B%0A%20%20align-items%3A%20center%3B%0A%20%20justify-content%3A%20center%3B%0A%20%20text-align%3A%20center%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20visibility%3A%20hidden%3B%0A%20%20opacity%3A%200%3B%0A%20%20background%3A%20white%3B%0A%20%20transition-property%3A%20opacity%3B%0A%20%20transition-duration%3A%200.2s%3B%0A%20%20transition-timing-function%3A%20ease-out%3B%0A%7D%0A%0A%23formbutton-formStatus%20a.hover-gray%20%7B%0A%20%20padding%3A%208px%2016px%3B%0A%20%20border-radius%3A%2015px%3B%0A%20%20transition%3A%20all%2075ms%20ease%200s%3B%0A%7D%0A%0A%23formbutton-formStatus%20a.hover-gray%3Ahover%20%7B%0A%20%20background%3A%20rgb(242%2C%20242%2C%20242)%3B%0A%7D%0A%0A%23formbutton-form%20.field%20%7B%0A%20%20white-space%3A%20nowrap%3B%0A%7D%0A%0A%23formbutton-form%20.field%3Anot(%3Afirst-child)%20%7B%0A%20%20padding-top%3A%2016px%3B%0A%7D%0A%0A%23formbutton-form%20.field.radioField%2C%20%0A%23formbutton-form%20.field.checkboxField%20%7B%0A%20%20padding-left%3A%201px%3B%0A%7D%0A%0A%23formbutton-form%20.field.radioField%20%7B%0A%20%20padding-top%3A%204px%3B%0A%7D%0A%0A%23formbutton-form%20.field.submitField%2C%0A%23formbutton-form%20.field.resetField%20%7B%0A%20%20text-align%3A%20right%3B%0A%7D%0A%0A%23formbutton-form%20label%20%7B%0A%20%20display%3A%20inline-block%3B%0A%20%20white-space%3A%20normal%3B%0A%7D%0A%0A%23formbutton-form%20.field%20%3E%20label%3Afirst-child%20%7B%0A%20%20margin-bottom%3A%204px%3B%0A%7D%0A%0A%23formbutton-form%20input%2C%0A%23formbutton-form%20select%2C%0A%23formbutton-form%20textarea%2C%0A%23formbutton-form%20button%2C%0A%23formbutton-form%20%23card-element%20%7B%0A%20%20font-family%3A%20inherit%3B%0A%20%20font-size%3A%20100%25%3B%0A%20%20color%3A%20inherit%3B%0A%20%20display%3A%20block%3B%0A%20%20box-sizing%3A%20border-box%3B%0A%20%20width%3A%20100%25%3B%0A%20%20-webkit-appearance%3A%20none%3B%0A%20%20-moz-appearance%3A%20none%3B%0A%20%20background%3A%20rgb(254%2C%20254%2C%20254)%3B%0A%7D%0A%0A%23formbutton-form%20input%3Anot(%5Btype%3D%22submit%22%5D)%3Anot(%5Btype%3D%22reset%22%5D)%2C%0A%23formbutton-form%20select%2C%0A%23formbutton-form%20textarea%2C%0A%23formbutton-form%20%23card-element%20%7B%0A%20%20color%3A%20%23555%3B%0A%20%20border%3A%20none%3B%0A%7D%0A%0A%23formbutton-form%20input%3Anot(%5Btype%3D%22submit%22%5D)%3Anot(%5Btype%3D%22reset%22%5D)%3A%3Aplaceholder%2C%0A%23formbutton-form%20select%3A%3Aplaceholder%2C%0A%23formbutton-form%20textarea%3A%3Aplaceholder%20%7B%0A%20%20color%3A%20rgba(0%2C0%2C0%2C0.4)%0A%7D%0A%0A%23formbutton-form%20input%3Afocus%3Anot(%5Btype%3D%22radio%22%5D)%3Anot(%5Btype%3D%22checkbox%22%5D)%2C%0A%23formbutton-form%20select%3Afocus%2C%0A%23formbutton-form%20textarea%3Afocus%20%7B%0A%20%20background%3A%20white%3B%0A%7D%0A%0A%23formbutton-form%20textarea%20%7B%0A%20%20min-height%3A%206rem%3B%0A%20%20resize%3A%20none%3B%0A%7D%0A%0A%23formbutton-form%20button%2C%0A%23formbutton-form%20%5Btype%3D%22submit%22%5D%2C%0A%23formbutton-form%20%5Btype%3D%22reset%22%5D%20%7B%0A%20%20display%3A%20inline-block%3B%0A%20%20border%3A%201px%20solid%20rgba(0%2C%200%2C%200%2C%200.12)%3B%0A%20%20border-radius%3A%203px%3B%0A%20%20padding%3A%200.65rem%200.75rem%200.6rem%3B%0A%20%20width%3A%20auto%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20-webkit-appearance%3A%20button%3B%0A%20%20-moz-appearance%3A%20button%3B%0A%20%20appearance%3A%20button%3B%0A%20%20transition-property%3A%20background-color%3B%0A%20%20transition-duration%3A%200.2s%3B%0A%20%20transition-timing-function%3A%20ease-out%3B%0A%20%20position%3A%20relative%3B%0A%20%20z-index%3A%201%3B%0A%7D%0A%0A%23formbutton-form%20button%3Ahover%2C%0A%23formbutton-form%20%5Btype%3D%22submit%22%5D%3Ahover%2C%0A%23formbutton-form%20%5Btype%3D%22reset%22%5D%3Ahover%20%7B%0A%20%20background-color%3A%20rgba(0%2C%200%2C%200%2C%200.1)%3B%0A%7D%0A%0A%23formbutton-form%20select%20%7B%0A%20%20text-transform%3A%20none%3B%0A%7D%0A%0A%23formbutton-form%20%5Btype%3D%22checkbox%22%5D%2C%0A%23formbutton-form%20%5Btype%3D%22radio%22%5D%20%7B%0A%20%20width%3A%20auto%3B%0A%20%20margin%3A%200%200.5em%200%200%3B%0A%20%20display%3A%20inline-block%3B%0A%20%20vertical-align%3A%20top%3B%0A%7D%0A%0A%23formbutton-form%20%5Btype%3D%22checkbox%22%5D%20%7B%0A%20%20-webkit-appearance%3A%20checkbox%3B%0A%20%20-moz-appearance%3A%20checkbox%3B%0A%20%20appearance%3A%20checkbox%3B%0A%7D%0A%0A%23formbutton-form%20%5Btype%3D%22radio%22%5D%20%7B%0A%20%20-webkit-appearance%3A%20radio%3B%0A%20%20-moz-appearance%3A%20radio%3B%0A%20%20appearance%3A%20radio%3B%0A%7D%0A%0A%23formbutton-modal%20input%3Afocus%2C%0A%23formbutton-modal%20select%3Afocus%2C%0A%23formbutton-modal%20textarea%3Afocus%2C%20%0A%23formbutton-modal%20button%3Afocus%2C%0A%23formbutton-modal%20%5Btype%3D%22submit%22%5D%3Afocus%2C%0A%23formbutton-modal%20%5Btype%3D%22reset%22%5D%3Afocus%20%7B%0A%20%20outline%3A%201px%20dotted%20%23212121%3B%20%0A%20%20outline%3A%205px%20auto%20-webkit-focus-ring-color%3B%0A%7D%0A%0A%23formbutton-modal%20input%3A%3A-moz-focus-inner%2C%0A%23formbutton-modal%20select%3A%3A-moz-focus-inner%2C%0A%23formbutton-modal%20textarea%3A%3A-moz-focus-inner%2C%20%0A%23formbutton-modal%20button%3A%3A-moz-focus-inner%2C%0A%23formbutton-modal%20%5Btype%3D%22submit%22%5D%3A%3A-moz-focus-inner%2C%0A%23formbutton-modal%20%5Btype%3D%22reset%22%5D%3A%3A-moz-focus-inner%20%7B%0A%20%20outline%3A%201px%20dotted%20%23212121%3B%20%0A%7D%0A%0A%23formbutton-modal.no-outline%20input%3Afocus%2C%0A%23formbutton-modal.no-outline%20select%3Afocus%2C%0A%23formbutton-modal.no-outline%20textarea%3Afocus%2C%20%0A%23formbutton-modal.no-outline%20button%3Afocus%2C%0A%23formbutton-modal.no-outline%20%5Btype%3D%22submit%22%5D%3Afocus%2C%0A%23formbutton-modal.no-outline%20%5Btype%3D%22reset%22%5D%3Afocus%20%7B%0A%20%20outline%3A%20none%3B%0A%7D%0A%3C%2Fstyle%3E%0A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20body%20%7B%0A%7D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%20%20%20%20%3C%2Fhead%3E%0A%20%20%20%20%20%20%20%20%3Cbody%3E%3C%2Fbody%3E%0A%20%20%20%20%20%20%3C%2Fhtml%3E" srcdoc="
+      <html>
+        <head>
+          
+          <style>
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul,nav ol,nav dl {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+</style>
+          <style>
+body {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1;
+  font-weight: 400;
+}
+
+#formbutton-shim {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+#formbutton-modalContainer {
+  position: fixed;
+  width: 320px;
+  right: 22px;
+  bottom: 104px;
+  transform: translate(0, 5%);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  cursor: default;
+}
+
+@media(max-width: 480px) {
+  #formbutton-modalContainer {
+    width: 276px;
+  }
+}
+
+@media (max-width: 375px) {
+  #formbutton-modalContainer {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+#formbutton-modalContainer.visible {
+  transform: translate(0, 0);
+}
+
+#formbutton-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 5px 5px 22px rgba(22, 22, 22, 0.2);
+  line-height: 1.2;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+#formbutton-title {
+  padding:  16px 16px;
+  background: #c4001a;
+  border-radius: 12px 12px 0 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+#formbutton-title.empty {
+  justify-content: flex-end;
+}
+
+@media(min-width: 375px) {
+  #formbutton-title.empty {
+    display: none;
+  }
+}
+
+#formbutton-title i {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-style: normal;
+}
+
+#formbutton-closeButton {
+  margin-left: auto;
+  color: transparent;  
+  background: transparent;
+  border: none;
+  text-shadow:
+    0 0 0 white,
+    -1px -1px 0 rgba(0,0,0, 0.2),  
+    1px -1px 0 rgba(0,0,0, 0.2),
+    -1px 1px 0 rgba(0,0,0, 0.2),
+    1px 1px 0 rgba(0,0,0, 0.2);  
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+#formbutton-closeButton::after {
+  content: &quot;❌&quot;
+}
+
+#formbutton-description {
+  padding: 0 40px 16px 16px;
+  background: #c4001a;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: smaller;
+  line-height: 1.25;
+}
+
+#formbutton-body {
+  padding: 16px;
+}
+
+#formbutton-formContainer {
+  position: relative;
+}
+
+#formbutton-formStatus {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background: white;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+#formbutton-formStatus a.hover-gray {
+  padding: 8px 16px;
+  border-radius: 15px;
+  transition: all 75ms ease 0s;
+}
+
+#formbutton-formStatus a.hover-gray:hover {
+  background: rgb(242, 242, 242);
+}
+
+#formbutton-form .field {
+  white-space: nowrap;
+}
+
+#formbutton-form .field:not(:first-child) {
+  padding-top: 16px;
+}
+
+#formbutton-form .field.radioField, 
+#formbutton-form .field.checkboxField {
+  padding-left: 1px;
+}
+
+#formbutton-form .field.radioField {
+  padding-top: 4px;
+}
+
+#formbutton-form .field.submitField,
+#formbutton-form .field.resetField {
+  text-align: right;
+}
+
+#formbutton-form label {
+  display: inline-block;
+  white-space: normal;
+}
+
+#formbutton-form .field > label:first-child {
+  margin-bottom: 4px;
+}
+
+#formbutton-form input,
+#formbutton-form select,
+#formbutton-form textarea,
+#formbutton-form button,
+#formbutton-form #card-element {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: rgb(254, 254, 254);
+}
+
+#formbutton-form input:not([type=&quot;submit&quot;]):not([type=&quot;reset&quot;]),
+#formbutton-form select,
+#formbutton-form textarea,
+#formbutton-form #card-element {
+  color: #555;
+  border: none;
+}
+
+#formbutton-form input:not([type=&quot;submit&quot;]):not([type=&quot;reset&quot;])::placeholder,
+#formbutton-form select::placeholder,
+#formbutton-form textarea::placeholder {
+  color: rgba(0,0,0,0.4)
+}
+
+#formbutton-form input:focus:not([type=&quot;radio&quot;]):not([type=&quot;checkbox&quot;]),
+#formbutton-form select:focus,
+#formbutton-form textarea:focus {
+  background: white;
+}
+
+#formbutton-form textarea {
+  min-height: 6rem;
+  resize: none;
+}
+
+#formbutton-form button,
+#formbutton-form [type=&quot;submit&quot;],
+#formbutton-form [type=&quot;reset&quot;] {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  padding: 0.65rem 0.75rem 0.6rem;
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+#formbutton-form button:hover,
+#formbutton-form [type=&quot;submit&quot;]:hover,
+#formbutton-form [type=&quot;reset&quot;]:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#formbutton-form select {
+  text-transform: none;
+}
+
+#formbutton-form [type=&quot;checkbox&quot;],
+#formbutton-form [type=&quot;radio&quot;] {
+  width: auto;
+  margin: 0 0.5em 0 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#formbutton-form [type=&quot;checkbox&quot;] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
+#formbutton-form [type=&quot;radio&quot;] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+#formbutton-modal input:focus,
+#formbutton-modal select:focus,
+#formbutton-modal textarea:focus, 
+#formbutton-modal button:focus,
+#formbutton-modal [type=&quot;submit&quot;]:focus,
+#formbutton-modal [type=&quot;reset&quot;]:focus {
+  outline: 1px dotted #212121; 
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+#formbutton-modal input::-moz-focus-inner,
+#formbutton-modal select::-moz-focus-inner,
+#formbutton-modal textarea::-moz-focus-inner, 
+#formbutton-modal button::-moz-focus-inner,
+#formbutton-modal [type=&quot;submit&quot;]::-moz-focus-inner,
+#formbutton-modal [type=&quot;reset&quot;]::-moz-focus-inner {
+  outline: 1px dotted #212121; 
+}
+
+#formbutton-modal.no-outline input:focus,
+#formbutton-modal.no-outline select:focus,
+#formbutton-modal.no-outline textarea:focus, 
+#formbutton-modal.no-outline button:focus,
+#formbutton-modal.no-outline [type=&quot;submit&quot;]:focus,
+#formbutton-modal.no-outline [type=&quot;reset&quot;]:focus {
+  outline: none;
+}
+</style>
+          
+          <style>
+            body {
+}
+          </style>
+        </head>
+        <body></body>
+      </html>" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" style="display: none; opacity: 0; position: fixed; inset: 0px; z-index: 16777271; border: none; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease-out;"></iframe><button id="formbutton-button" class="formbutton button" aria-label="Toggle FormButton Popup" title="Toggle FormButton Popup" style="cursor: pointer; color: rgb(255, 255, 255); background: crimson; fill: white; width: 60px; height: 60px; z-index: 16777270; position: fixed; bottom: 0px; right: 0px; border: 0px; box-sizing: border-box; padding: 15px 20px; margin: 22px; display: flex; justify-content: center; align-items: center; border-radius: 50px; box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 2px 0px inset, rgba(0, 0, 0, 0.1) 0px -4px 8px 0px inset, rgba(22, 22, 22, 0.5) 0.3em 0.3em 1.4em; font-size: 16px;"><svg id="formbutton-buttonImage" viewBox="0 0 6.3499997 7.4083333" width="100%" height="100%"><path d="m 1.0834321,0.1292394 c -0.5491197,0 -0.9913472,0.4417175 -0.9913472,0.9908372 v 4.0128403 c 0,0.5491201 0.4422275,0.9913477 0.9913472,0.9913477 H 4.1773753 C 4.3297414,7.0476198 5.3858089,7.3434351 6.2442561,7.3390859 5.4678746,6.9530202 5.3218667,6.3864112 5.8172061,5.9681383 5.8166321,5.9678514 5.8162418,5.9673831 5.8156561,5.9671283 6.0908672,5.7913804 6.273829,5.4850425 6.273829,5.132927 V 1.1200863 c 0,-0.5491199 -0.4422277,-0.9908375 -0.9913476,-0.9908375 z"></path></svg></button></div></body></html>
+</div>
+
+</div>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 4000); // Changed to 4000 milliseconds (4 seconds)
+}
+
+function showPage() {
+  document.getElementById("loader1").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
 </html>
