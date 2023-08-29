@@ -871,14 +871,99 @@ var typed = new Typed(".typing", {
   </div>
 </div><p></p>
 
+<style>
+    /* Set full height for all containing elements */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #pdfContainer {
+      display: none;
+      width: 100%; /* Adjust this value as needed */
+      float: right;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      height: 100vh; /* Set the height of the container to full height */
+      overflow: hidden; /* Hide any overflow content */
+      position: relative; /* Required for positioning close button */
+    }
+    
+    /* Style the embedded PDF */
+    #pdfEmbed {
+      width: 100%;
+      height: 100%;
+    }
+
+    
+    /* Add scrolling to the PDF container */
+    #pdfScroll {
+      
+      height: 100%;
+      overflow: auto;
+    }
+    
+    /* Style the close button */
+    #closeButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #fff;
+      padding: 5px 10px;
+      border: 1px solid crimson;
+      cursor: pointer;
+    }
+ #displayButton {
+      
+      border-radius: 30px;
+      color : blue;
+}
+    
+   
+
+  </style>
+
 <p>💬 I'm currently pursuing the stream of Computer Science and Engineering at Lovely Professional University(Punjab), India. </p>
  <p>👨&zwj;💻 My technical skills include proficiency in C,&nbsp; C++,&nbsp; Java,&nbsp; Python and basic knowledge of Kotlin. I'm also familiar with &nbsp;front-end languages such as HTML,&nbsp; CSS,&nbsp; JavaScript.
 </p>
 <p>💡 Ask me about Python, Java, Data Science, AI, Machine/Deep Learning, NLP. </p>
 <p>🔮 In terms of leadership, I have participated in GDSC-LPU as a part of the A.I/ML team member, where I assisted machine learning in simpler methods while mentoring the mentee and explored different concepts of ML.
  </p>
-<p> 📄 Know about my experiences <a class="btn btn-dark btn-xl ml-2 mr-2 mb-3 about-btn" href="https://drive.google.com/file/d/1Jzg3zBSHgOLvNBT82M9YNZ9M5k9-XjY_/view" download="" target="_blank" style="color:white;"><strong>&nbsp;&nbsp;<i style="font-size:15px" class="fa"></i>&nbsp; resume </strong></a></p>
-	<p>📫 If you're interested in connecting or collaborating, feel free to reach out!:- gopikrishnaguntamukkala3@gmail.com </p></section>
+<p> 📄 Know about my experiences&nbsp;&nbsp;
+<button id="displayButton">View Resume</button>
+  <div id="pdfContainer"></div>
+
+  <script>
+    document.getElementById("displayButton").addEventListener("click", function() {
+      var pdfLink = "https://drive.google.com/file/d/1zeWH00uUZtWlv46rC_fTBx_Mr4IQurdL/preview";
+
+      // Display the PDF using the <embed> tag within a scrollable container
+      var pdfScroll = document.createElement("div");
+      pdfScroll.id = "pdfScroll";
+      
+      var embedTag = document.createElement("embed");
+      embedTag.id = "pdfEmbed";
+      embedTag.src = pdfLink;
+      pdfScroll.appendChild(embedTag);
+      
+      // Add close button with "X" symbol
+      var closeButton = document.createElement("button");
+      closeButton.id = "closeButton";
+      closeButton.innerHTML = "&#10006;"; // "X" symbol HTML entity
+      closeButton.addEventListener("click", function() {
+        document.getElementById("pdfContainer").style.display = "none";
+      });
+      pdfScroll.appendChild(closeButton);
+      
+      document.getElementById("pdfContainer").innerHTML = "";
+      document.getElementById("pdfContainer").appendChild(pdfScroll);
+
+      // Display the PDF container
+      document.getElementById("pdfContainer").style.display = "block";
+    });
+  </script> </p>	
+<p>📫 If you're interested in connecting or collaborating, feel free to reach out!:- gopikrishnaguntamukkala3@gmail.com </p></section>
                       <style>
 .education,
 
@@ -1292,7 +1377,7 @@ language you wish to translate into. A language detector model that, after runni
 <section class="contact" id="contact"><h2 align="center">Contact Address</h2>
 <address>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Contact Address&nbsp;:-&nbsp;</strong> &nbsp;26-55-1,&nbsp; Venkata Krishna Puram, &nbsp;Peddakakani (&nbsp;Mandal&nbsp;),&nbsp; Guntur (&nbsp;District&nbsp;),&nbsp; Andhra Pradesh, &nbsp;India &nbsp;-&nbsp; 522&nbsp; 509.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Mobile Number&nbsp;&nbsp;:-</strong> 📱 +91 7659046696 &nbsp;&nbsp;&nbsp;📧<strong><a href="mailto:gopikrishnaguntamukkala3@gmail.com">&nbsp;Gmail to me</a></strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Mobile Number&nbsp;&nbsp;:-</strong> 📱 +91 76590&nbsp;46696 &nbsp;&nbsp;&nbsp;📧<strong><a href="mailto:gopikrishnaguntamukkala3@gmail.com">&nbsp;Gmail to me</a></strong><br>
 </address>
 
 </section>
