@@ -10,8 +10,6 @@
 - Languages: HTML5, CSS3, SCSS, JavaScript
 - Frameworks/Libraries: Bootstrap, jQuery
 - Version Control: Git/GitHub
-- Responsive Design: Media Queries, Flexbox, CSS Grid
-- Cross-Browser Compatibility
 - Performance Optimization
   
 # Link:
