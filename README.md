@@ -38,5 +38,4 @@ I am continuously working on enhancing my portfolio. Feel free to check back for
 
 ---
 
-**Note:** This code is shared for learning purposes only. Please respect the terms and conditions specified in the license.
 
