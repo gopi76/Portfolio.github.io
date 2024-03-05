@@ -25,12 +25,6 @@ I have designed a dynamic and interactive website that highlights the following:
 - **Version Control:** Git/GitHub
 - **Performance Optimization:** Implementing best practices for optimal website performance.
 
-## Visit My Portfolio
-
-Explore my portfolio here and get to know more about my journey in the world of software development.
-```bash
-https://gopi76.github.io/Portfolio.github.io/
-```
 
 ## Note
 
