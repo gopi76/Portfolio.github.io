@@ -30,4 +30,4 @@ This portfolio is a canvas in progress! Keep an eye out for updates as I continu
 
 ---
 
-## Explore my evolving portfolio [here](https://gopi76.github.io/Portfolio.github.io/) and witness the magic! 🌐✨
+## Explore my evolving portfolio <!-- [here](https://gopi76.github.io/Portfolio.github.io/) --> and witness the magic! 🌐✨
