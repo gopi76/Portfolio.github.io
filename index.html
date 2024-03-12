@@ -354,6 +354,7 @@ hr1 {
 <li><a href="https://drive.google.com/uc?export=download&amp;id=1XNSlOp-m3vE7vuzToEGlAekiKko0mS_L"  class="menu-btn"><strong><i class="fa fa-download"></i>Resume</strong></a></li>
 
                 <li><a href="#contact" class="active"><strong>Contact</strong></a></li>
+                
                 <li><a href="#publications" class="menu-btn"><strong>Publications</strong></a></li>
                 <li><a href="#acheivements" class="menu-btn"><strong>Achievements</strong></a></li>
                 <li><a href="#links" class="menu-btn"><strong>Links</strong></a></li>
@@ -1447,7 +1448,7 @@ language you wish to translate into. A language detector model that, after runni
       <h4>Data Science | Internship</h4>
       <h4>Aug 2023 - Nov 2023</h4>
       <div class="expanded-content">
-        <p>During my internship at Zummit InfoLabs,&nbsp; I worked on various AI projects.&nbsp;I gained hands-on experience with Python,&nbsp;Libraries and Machine learning algorithms. &nbsp;Additionally,&nbsp; I collaborated with a team of data scientists and learned best practices in the field.</p>
+        <p>During my internship at Zummit InfoLabs,&nbsp; I worked on various AI projects.&nbsp;I gained hands-on experience with Python,&nbsp;its Libraries and Algorithms. &nbsp;Additionally,&nbsp; I collaborated with a team of data scientists and learned best practices in the field.</p>
       </div>
       <p class="read-more" onclick="toggleExpand(this)">Read More ></p>
     </div>
@@ -1790,7 +1791,148 @@ function toggleExpand(element) {
     </section>
 <br>
 
+<section class="recommendations">
+        <div class="max-width">
+            <center><h2 class="title">
+                Recommendations</h2></center>
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: black;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  color: crimson;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 50px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+/* Add an italic font style to all quotes */
+q {font-style: bold;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <q>I have known him in my capacity as his faculty of the subject of Machine Learning 2. I have observed that he is an exceptionally focused individual, who is extremely particular about his work.
+Paying great attention to details is his core strength as he has always thrived to give his best while trying to encapsulate a broader perspective in his area of work and education. He follows his passion with a systematic and sincere approach, always demonstrating a sense of accountability and competence in the process. 
+</q>
+<p class="author" > - Mr. Pranjal Kumar [Assistant Professor at LPU] &nbsp;&nbsp;<a href="https://www.linkedin.com/in/pranjal-kumar-900b0984/" target="_blank" style="color:white;"><i class="fab fa-linkedin colo" style="color:white;"></i> LinkedIN</a>  </p>
+  
+</div>
+
+<div class="mySlides">
+  <q>Gopi's Python & ML expertise shines, with coding contest wins showcasing his problem-solving brilliance. But he's not just skilled; he's also a generous mentor, always willing to share his knowledge. A valuable asset to any team in the organization.</q>
+  <p class="author" > - Kasi Harsha [Upcoming Analyst at Capgemini] &nbsp;&nbsp;<a href="https://www.linkedin.com/in/harshakasi07/" target="_blank" style="color:white;"><i class="fab fa-linkedin colo" style="color:white;"></i> LinkedIN</a>   </p>
+</div>
+
+
+<div class="mySlides">
+  <q>He demonstrates his commitment to honing his technical skills and his ability to flourish in competitive circumstances. Beyond his academic and programming prowess, Gopi is a highly motivated and dedicated individual. His dedication to his studies is unrivaled, and his work ethic is an inspiration to his classmates.  </q>
+  <p class="author" > - Mr. Virrat Devaser [Associate Professor at LPU] &nbsp;&nbsp;<a href="https://www.linkedin.com/in/virrat-devaser-37b27943/" target="_blank" style="color:white;"><i class="fab fa-linkedin colo" style="color:white;"></i> LinkedIN</a>  </p>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> </div> </section>
 
 
 
