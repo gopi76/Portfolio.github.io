@@ -19,14 +19,14 @@ Behold a dynamic and interactive website showcasing:
 
 ## Technical Stack Used For this Project 💻
 
-- **Languages:** HTML5, CSS3, SCSS, JavaScript (basic)
+- **Languages:** HTML5, CSS3, SCSS, JavaScript 
 - **Frameworks/Libraries:** Embracing Bootstrap and dancing with jQuery
 - **Version Control:** Navigating the seas of Git/GitHub
 - **Performance Optimization:** Crafted with care for optimal website performance.
 
 ## Note 📝
 
-This portfolio is a canvas in progress! Keep an eye out for updates as I continue adding new features in my free moments. Download the code for educational purposes only.
+This portfolio is in progress! Keep an eye out for updates as I continue adding new features in my free moments. Download the code for educational and learning purposes only.
 
 ---
 
