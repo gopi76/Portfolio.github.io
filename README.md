@@ -1,5 +1,5 @@
 # Welcome to My Portfolio! 🌟
-<img src="portfolio_image1.jpg" alt="Portfolio Image" height="1000">
+![Portfolio Image](portfolio_image1.jpg)
 
 
 ## About Me 💼
