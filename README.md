@@ -26,7 +26,7 @@ Behold a dynamic and interactive website showcasing:
 
 ## Note 📝
 
-This portfolio is in progress! Keep an eye out for updates as I continue adding new features in my free moments. Download the code for educational and learning purposes only.
+This portfolio is in progress! Keep an eye out for updates as I continue adding new features in my free moments.
 
 ---
 
