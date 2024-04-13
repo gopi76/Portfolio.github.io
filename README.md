@@ -1,6 +1,6 @@
 # Welcome to My Portfolio! 🌟
+![Portfolio Image](portfolio_image1.jpg)
 
-🚀 Dive into the world where I bring my skills, projects, and experiences in software development to life!
 
 ## About Me 💼
 
