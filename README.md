@@ -1,5 +1,5 @@
 # Welcome to My Portfolio! 🌟
-![Portfolio Image](portfolio_image1.jpg)
+<!-- ![Portfolio Image](portfolio_image1.jpg) -->
 
 
 ## About Me 💼
